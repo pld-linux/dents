@@ -1,3 +1,5 @@
+# TODO:
+# - init script
 Summary:	This is the DENTS nameserver
 Summary(pl):	Serwer nazw DENTS
 Name:		dents
@@ -5,12 +7,12 @@ Version:	0.3.1
 Release:	1
 License:	GPL
 Group:		Networking/Daemons
-Source0:	http://ftp1.sourceforge.net/dents/%{name}-%{version}.tar.gz
+Source0:	http://dl.sf.net/dents/%{name}-%{version}.tar.gz
 # Source0-md5:	b7ffc0305143731b70934240acd426b6
 URL:		http://sourceforge.net/projects/dents/
 BuildRequires:	glib-devel
-Prereq:		rc-scripts
 Prereq:		/sbin/chkconfig
+Prereq:		rc-scripts
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
