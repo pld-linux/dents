@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Networking/Daemons
 Source0:	http://ftp1.sourceforge.net/dents/%{name}-%{version}.tar.gz
+# Source0-md5:	b7ffc0305143731b70934240acd426b6
 URL:		http://sourceforge.net/projects/dents/
 BuildRequires:	glib-devel
 Prereq:		rc-scripts
