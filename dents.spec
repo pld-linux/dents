@@ -45,7 +45,6 @@ else
 fi
 
 %preun
-/sbin/chkconfig --del dents
 if [ "$1" = "0" ]; then
 	if [ -f /var/lock/subsys/dents ]; then
 		/etc/rc.d/init.d/dents stop 1>&2
