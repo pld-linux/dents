@@ -5,8 +5,6 @@ Version:	0.3.1
 Release:	1
 License:	GPL
 Group:		Networking/Daemons
-Group(de):	Netzwerkwesen/Server
-Group(pl):	Sieciowe/Serwery
 Source0:	http://ftp1.sourceforge.net/dents/%{name}-%{version}.tar.gz
 URL:		http://sourceforge.net/projects/dents/
 BuildRequires:	glib-devel
