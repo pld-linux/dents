@@ -24,7 +24,7 @@ Dents. Jest to serwer nazw, który nie obsysa.
 %setup -q
 
 %build
-%configure
+%configure2_13
 %{__make}
 
 %install
