@@ -7,12 +7,12 @@ Version:	0.3.1
 Release:	1
 License:	GPL
 Group:		Networking/Daemons
-Source0:	http://dl.sf.net/dents/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/dents/%{name}-%{version}.tar.gz
 # Source0-md5:	b7ffc0305143731b70934240acd426b6
 URL:		http://sourceforge.net/projects/dents/
 BuildRequires:	glib-devel
-Prereq:		/sbin/chkconfig
-Prereq:		rc-scripts
+PreReq:		rc-scripts
+Requires(post,preun):	/sbin/chkconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
