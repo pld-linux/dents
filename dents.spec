@@ -29,22 +29,10 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 %post
-/sbin/chkconfig --add dents
-if [ -f /var/lock/subsys/dents ]; then
-	/etc/rc.d/init.d/dents restart 1>&2
-else
-	echo "Run \"/etc/rc.d/init.d/dents start\" to start dents DNS server."
-fi
-
+DESC="dents DNS server"; %chkconfig_add
 
 %preun
-/sbin/chkconfig --del dents
-if [ "$1" = "0" ]; then
-	if [ -f /var/lock/subsys/dents ]; then
-		/etc/rc.d/init.d/dents stop 1>&2
-	fi
-	/sbin/chkconfig --del dents
-fi
+%chkconfig_del
 
 %clean
 rm -rf $RPM_BUILD_ROOT
