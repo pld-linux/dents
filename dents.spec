@@ -11,7 +11,7 @@ Source0:	http://dl.sourceforge.net/dents/%{name}-%{version}.tar.gz
 # Source0-md5:	b7ffc0305143731b70934240acd426b6
 URL:		http://sourceforge.net/projects/dents/
 BuildRequires:	glib-devel
-PreReq:		rc-scripts
+Requires:	rc-scripts
 Requires(post,preun):	/sbin/chkconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -39,17 +39,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 /sbin/chkconfig --add dents
-if [ -f /var/lock/subsys/dents ]; then
-	/etc/rc.d/init.d/dents restart 1>&2
-else
-	echo "Run \"/etc/rc.d/init.d/dents start\" to start dents DNS server."
-fi
+%service dents restart
 
 %preun
 if [ "$1" = "0" ]; then
-	if [ -f /var/lock/subsys/dents ]; then
-		/etc/rc.d/init.d/dents stop 1>&2
-	fi
+	%service dents stop
 	/sbin/chkconfig --del dents
 fi
 
