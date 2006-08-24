@@ -11,8 +11,9 @@ Source0:	http://dl.sourceforge.net/dents/%{name}-%{version}.tar.gz
 # Source0-md5:	b7ffc0305143731b70934240acd426b6
 URL:		http://sourceforge.net/projects/dents/
 BuildRequires:	glib-devel
-Requires:	rc-scripts
+BuildRequires:	rpmbuild(macros) >= 1.268
 Requires(post,preun):	/sbin/chkconfig
+Requires:	rc-scripts
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
