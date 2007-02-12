@@ -1,7 +1,7 @@
 # TODO:
 # - init script
 Summary:	This is the DENTS nameserver
-Summary(pl):	Serwer nazw DENTS
+Summary(pl.UTF-8):   Serwer nazw DENTS
 Name:		dents
 Version:	0.3.1
 Release:	1
@@ -19,8 +19,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Dents. It's a name server that doesn't suck.
 
-%description -l pl
-Dents. Jest to serwer nazw, który nie obsysa.
+%description -l pl.UTF-8
+Dents. Jest to serwer nazw, ktÃ³ry nie obsysa.
 
 %prep
 %setup -q
