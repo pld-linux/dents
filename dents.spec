@@ -1,7 +1,7 @@
 # TODO:
 # - init script
 Summary:	This is the DENTS nameserver
-Summary(pl.UTF-8):   Serwer nazw DENTS
+Summary(pl.UTF-8):	Serwer nazw DENTS
 Name:		dents
 Version:	0.3.1
 Release:	1
